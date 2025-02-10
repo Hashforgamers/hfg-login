@@ -38,7 +38,7 @@ def login(email, password, parent_type):
 
     current_app.logger.info(f"Test 4 {password_manager.password} {password}")
     # Verify password
-    if not check_password_hash(password_manager.password, password):
+    if password_manager.password != password:
         return None, "Invalid credentials"
 
     current_app.logger.info(f"Test 5")
