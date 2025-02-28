@@ -6,3 +6,4 @@ Werkzeug==2.3.4
 Flask-Mail
 PyJWT
 redis
+flask-cors
