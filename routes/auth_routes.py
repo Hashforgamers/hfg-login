@@ -1,6 +1,8 @@
 from flask import Blueprint, request, jsonify
 from services.auth_services import login, invalidate_token
 from utils.jwt_helper import decode_token  # For decoding token if needed
+from models.vendorAccount import VendorAccount
+from models.vendorPin import VendorPin
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -102,16 +104,19 @@ def validate_pin():
 
     # If PIN valid, you might want to generate token or proceed with login
     # For example, create a token (dummy example here)
-    token = f"token-for-vendor-{vendor_id}"
+    token, error = generate_token_for_vendor(vendor_id)
+    if error:
+        return jsonify({'status': 'fail', 'message': error}), 401
 
     return jsonify({
         'status': 'success',
         'message': 'PIN validated successfully.',
         'data': {
             'token': token,
-            'expires_in': 3600  # seconds
+            'expires_in': 3600  # example expiry
         }
     }), 200
+
 
 @auth_bp.route('/logout', methods=['POST'])
 def logout_route():
