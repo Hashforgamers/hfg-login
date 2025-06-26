@@ -9,27 +9,25 @@ from sqlalchemy import and_
 from flask import current_app
 from utils.token_blacklist import add_to_blacklist
 
-from flask_jwt_extended import create_access_token
-
 def generate_token_for_vendor(vendor_id, parent_type='vendor'):
     """Generate JWT token directly from vendor_id and parent_type."""
     if parent_type != 'vendor':
         raise ValueError("Currently only supports 'vendor' parent_type")
 
-    # You could add extra checks here if needed, e.g., check vendor exists
+    # Check vendor existence
     vendor = Vendor.query.get(vendor_id)
     if not vendor:
         return None, "Vendor not found"
 
-    # Create JWT token identity payload
+    # Create JWT identity payload
     identity = {
         'id': vendor.id,
         'type': parent_type,
         'email': vendor.account.email if vendor.account else None
     }
 
-    # Generate token (customize expiration if needed)
-    token = create_access_token(identity=identity)
+    # Use custom JWT helper
+    token = create_jwt_token(identity=identity)
 
     return token, None
 
