@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from services.auth_services import login, invalidate_token
+from services.auth_services import login, invalidate_token, generate_token_for_vendor
 from utils.jwt_helper import decode_token  # For decoding token if needed
 from models.vendorAccount import VendorAccount
 from models.vendorPin import VendorPin
