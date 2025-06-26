@@ -3,6 +3,7 @@ from services.auth_services import login, invalidate_token
 from utils.jwt_helper import decode_token  # For decoding token if needed
 from models.vendorAccount import VendorAccount
 from models.vendorPin import VendorPin
+from models.vendor import Vendor
 from models.passwordManager import PasswordManager
 
 auth_bp = Blueprint('auth', __name__)
