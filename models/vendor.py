@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Sequence
 from sqlalchemy.orm import relationship
 from app.extension import db  # Import db from the models package
 from datetime import datetime
-from models.vemdorAccount import VendorAccount
+from models.vendorAccount import VendorAccount
 from models.vendorPin import VendorPin
 
 # Vendor model
