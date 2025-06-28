@@ -2,6 +2,8 @@ from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Sequence
 from sqlalchemy.orm import relationship
 from app.extension import db  # Import db from the models package
 from datetime import datetime
+from models.vendorAccount import VendorAccount
+from models.vendorPin import VendorPin
 
 # Vendor model
 class Vendor(db.Model):
@@ -14,3 +16,7 @@ class Vendor(db.Model):
 
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
+    account_id = Column(Integer, ForeignKey('vendor_accounts.id'), nullable=True)
+    account = relationship('VendorAccount', back_populates='vendors')
+
+    pin = relationship('VendorPin', back_populates='vendor', uselist=False, cascade="all, delete-orphan")
