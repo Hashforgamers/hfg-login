@@ -5,6 +5,8 @@ from models.vendorAccount import VendorAccount
 from models.vendorPin import VendorPin
 from models.vendor import Vendor
 from models.passwordManager import PasswordManager
+from models.console import Console
+from sqlalchemy import func
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -77,11 +79,27 @@ def login_route():
 
     # On successful login: return all vendors associated with this VendorAccount
     vendors = vendor_account.vendors
+    vendor_ids = [v.id for v in vendors]
+    pc_counts = {}
+    if vendor_ids:
+        pc_count_rows = (
+            Console.query
+            .with_entities(Console.vendor_id, func.count(Console.id))
+            .filter(
+                Console.vendor_id.in_(vendor_ids),
+                func.lower(Console.console_type) == 'pc'
+            )
+            .group_by(Console.vendor_id)
+            .all()
+        )
+        pc_counts = {vendor_id: count for vendor_id, count in pc_count_rows}
+
     vendor_list = [{
         'id': v.id,
         'cafe_name': v.cafe_name,
         'owner_name': v.owner_name,
-        'description': v.description
+        'description': v.description,
+        'pc_count': pc_counts.get(v.id, 0)
     } for v in vendors]
 
     return jsonify({
@@ -115,7 +133,7 @@ def validate_pin():
         'message': 'PIN validated successfully.',
         'data': {
             'token': token,
-            'expires_in': 3600  # example expiry
+            'expires_in': 3600*4  # example expiry
         }
     }), 200
 
