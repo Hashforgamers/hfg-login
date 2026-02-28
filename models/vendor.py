@@ -20,3 +20,4 @@ class Vendor(db.Model):
     account = relationship('VendorAccount', back_populates='vendors')
 
     pin = relationship('VendorPin', back_populates='vendor', uselist=False, cascade="all, delete-orphan")
+    consoles = relationship('Console', back_populates='vendor', cascade="all, delete-orphan")
