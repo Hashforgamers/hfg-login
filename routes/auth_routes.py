@@ -3,9 +3,8 @@ from services.auth_services import login, invalidate_token, generate_token_for_v
 from utils.jwt_helper import decode_token  # For decoding token if needed
 from flask_mail import Message
 from datetime import datetime, timedelta
-from app.extension import mail
+from app.extension import mail,db
 from models.passwordResetCode import PasswordResetCode
-from app.extension import db
 from models.vendorAccount import VendorAccount
 from models.vendorPin import VendorPin
 from models.vendor import Vendor
