@@ -24,3 +24,11 @@ class Config:
     REDIS_HOST = os.getenv('REDIS_HOST', 'localhost')
     REDIS_PORT = int(os.getenv('REDIS_PORT', 6379))
     REDIS_DB = int(os.getenv('REDIS_DB', 0))
+    
+    MAIL_SERVER         = os.getenv('MAIL_SERVER', 'mail.smtp2go.com')
+    MAIL_PORT           = int(os.getenv('MAIL_PORT', 2525))
+    MAIL_USE_TLS        = os.getenv('MAIL_USE_TLS', 'true').lower() == 'true'
+    MAIL_USE_SSL        = os.getenv('MAIL_USE_SSL', 'false').lower() == 'true'
+    MAIL_USERNAME       = os.getenv('MAIL_USERNAME')
+    MAIL_PASSWORD       = os.getenv('MAIL_PASSWORD')
+    MAIL_DEFAULT_SENDER = os.getenv('MAIL_DEFAULT_SENDER')
