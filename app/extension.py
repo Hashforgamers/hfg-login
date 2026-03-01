@@ -2,10 +2,12 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_mail import Mail
 import redis
 
 db = SQLAlchemy()
 migrate = Migrate()
+mail    = Mail()
 
 
 def configure_redis(app: Flask):
