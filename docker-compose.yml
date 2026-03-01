@@ -18,6 +18,13 @@ services:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
       - REDIS_DB=0
+      - MAIL_SERVER=mail.smtp2go.com
+      - MAIL_PORT=2525
+      - MAIL_USE_TLS=true
+      - MAIL_USE_SSL=false
+      - MAIL_USERNAME=support@hashforgamers.co.in
+      - MAIL_PASSWORD=h3b:@yasDm
+      - MAIL_DEFAULT_SENDER=support@hashforgamers.co.in
     volumes:
       - .:/app
     command: ["python", "app.py"]
