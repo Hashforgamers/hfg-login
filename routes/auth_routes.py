@@ -10,7 +10,7 @@ from models.vendorPin import VendorPin
 from models.vendor import Vendor
 from models.passwordManager import PasswordManager
 from models.console import Console
-from sqlalchemy import func
+from sqlalchemy import func, text
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -45,6 +45,26 @@ auth_bp = Blueprint('auth', __name__)
 #             'expires_in': 3600  # Example: token expiration time in seconds
 #         }
 #     }), 200
+
+# ─────────────────────────────────────────────────────────────
+# HEALTH CHECK — For UptimeRobot monitoring
+# GET /api/health
+# ─────────────────────────────────────────────────────────────
+@auth_bp.route('/health', methods=['GET'])
+def auth_health():
+    try:
+        db.session.execute(text("SELECT 1"))
+        return jsonify({
+            "status": "ok",
+            "service": "auth",
+            "timestamp": datetime.utcnow().isoformat()
+        }), 200
+    except Exception as e:
+        return jsonify({
+            "status": "error",
+            "service": "auth",
+            "message": str(e)
+        }), 500
 
 @auth_bp.route('/login', methods=['POST'])
 def login_route():
