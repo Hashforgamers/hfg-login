@@ -9,8 +9,8 @@ from flask_cors import CORS
 
 def create_app():
     app = Flask(__name__)
-    CORS(app)
     app.config.from_object(Config)
+    CORS(app, origins=app.config.get("CORS_ALLOWED_ORIGINS", "*"))
 
     db.init_app(app)
     migrate.init_app(app, db)
@@ -20,9 +20,8 @@ def create_app():
     
 
     # Configure logging
-    debug_mode = os.getenv("DEBUG_MODE", "false").lower() == "true"
+    debug_mode = app.config.get("DEBUG_MODE", False)
     log_level = logging.DEBUG if debug_mode else logging.WARNING
     logging.basicConfig(level=log_level, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
     return app
-

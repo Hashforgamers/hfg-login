@@ -7,3 +7,4 @@ Flask-Mail
 PyJWT
 redis
 flask-cors
+gunicorn
