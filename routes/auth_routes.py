@@ -1,7 +1,7 @@
 import time
 from flask import Blueprint, request, jsonify, current_app
-from services.auth_services import login, invalidate_token, generate_token_for_vendor
-from utils.jwt_helper import decode_token  # For decoding token if needed
+from services.auth_services import invalidate_token
+from utils.jwt_helper import create_jwt_token
 from flask_mail import Message
 from datetime import datetime, timedelta
 from app.extension import mail,db
@@ -25,6 +25,17 @@ def _verify_password(stored_password: str, provided_password: str) -> bool:
         return True
     try:
         return check_password_hash(stored_password, provided_password)
+    except Exception:
+        return False
+
+
+def _verify_pin(stored_pin: str, provided_pin: str) -> bool:
+    if not stored_pin:
+        return False
+    if stored_pin == provided_pin:
+        return True
+    try:
+        return check_password_hash(stored_pin, provided_pin)
     except Exception:
         return False
 
@@ -169,32 +180,61 @@ def login_route():
 
 @auth_bp.route('/validatePin', methods=['POST'])
 def validate_pin():
-    data = request.json
-    vendor_id = data.get('vendor_id')
-    pin = data.get('pin')
+    started_at = time.perf_counter()
+    data = request.get_json(silent=True) or {}
+    vendor_id_raw = data.get('vendor_id')
+    pin = str(data.get('pin') or "").strip()
+
+    try:
+        vendor_id = int(vendor_id_raw)
+    except (TypeError, ValueError):
+        vendor_id = None
 
     if not vendor_id or not pin:
         return jsonify({'status': 'fail', 'message': 'vendor_id and pin are required.'}), 400
 
-    # Find vendor pin
-    vendor_pin = VendorPin.query.filter_by(vendor_id=vendor_id, pin_code=pin).first()
-    if not vendor_pin:
+    if len(pin) < 4 or len(pin) > 10:
         return jsonify({'status': 'fail', 'message': 'Invalid vendor ID or PIN.'}), 401
 
-    # If PIN valid, you might want to generate token or proceed with login
-    # For example, create a token (dummy example here)
-    token, error = generate_token_for_vendor(vendor_id)
-    if error:
-        return jsonify({'status': 'fail', 'message': error}), 401
+    pin_row = (
+        VendorPin.query
+        .join(Vendor, Vendor.id == VendorPin.vendor_id)
+        .outerjoin(VendorAccount, VendorAccount.id == Vendor.account_id)
+        .with_entities(
+            VendorPin.pin_code,
+            Vendor.id.label("vendor_id"),
+            VendorAccount.email.label("email"),
+        )
+        .filter(VendorPin.vendor_id == vendor_id)
+        .first()
+    )
 
-    return jsonify({
+    if not pin_row or not _verify_pin(pin_row.pin_code, pin):
+        return jsonify({'status': 'fail', 'message': 'Invalid vendor ID or PIN.'}), 401
+
+    token = create_jwt_token(identity={
+        'id': pin_row.vendor_id,
+        'type': 'vendor',
+        'email': pin_row.email
+    })
+
+    response = jsonify({
         'status': 'success',
         'message': 'PIN validated successfully.',
         'data': {
             'token': token,
-            'expires_in': 3600*4  # example expiry
+            'expires_in': 3600 * 4
         }
-    }), 200
+    })
+    response.headers["X-Response-Time-ms"] = f"{(time.perf_counter() - started_at) * 1000:.2f}"
+
+    current_app.logger.info(
+        "validatePin success vendor_id=%s latency_ms=%.2f",
+        vendor_id,
+        (time.perf_counter() - started_at) * 1000,
+    )
+
+    return response, 200
 
 
 @auth_bp.route('/logout', methods=['POST'])
