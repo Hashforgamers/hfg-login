@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the application code
 COPY . /app
 
-# Expose port 5053
+# Expose port 5055
 EXPOSE 5055
 
-# Run the application
-CMD ["python", "app.py"]
+# Run the application with a production WSGI server
+CMD ["gunicorn", "-w", "2", "-k", "gthread", "--threads", "4", "-b", "0.0.0.0:5055", "--timeout", "30", "app:app"]

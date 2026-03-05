@@ -1,4 +1,5 @@
-from flask import Blueprint, request, jsonify
+import time
+from flask import Blueprint, request, jsonify, current_app
 from services.auth_services import login, invalidate_token, generate_token_for_vendor
 from utils.jwt_helper import decode_token  # For decoding token if needed
 from flask_mail import Message
@@ -11,8 +12,21 @@ from models.vendor import Vendor
 from models.passwordManager import PasswordManager
 from models.console import Console
 from sqlalchemy import func, text
+from sqlalchemy import and_
+from werkzeug.security import check_password_hash
 
 auth_bp = Blueprint('auth', __name__)
+
+
+def _verify_password(stored_password: str, provided_password: str) -> bool:
+    if not stored_password:
+        return False
+    if stored_password == provided_password:
+        return True
+    try:
+        return check_password_hash(stored_password, provided_password)
+    except Exception:
+        return False
 
 # @auth_bp.route('/login', methods=['POST'])
 # def login_route():
@@ -68,69 +82,90 @@ def auth_health():
 
 @auth_bp.route('/login', methods=['POST'])
 def login_route():
-    data = request.json
-    email = data.get('email')
-    password = data.get('password')
+    started_at = time.perf_counter()
+    data = request.get_json(silent=True) or {}
+    email = (data.get('email') or "").strip().lower()
+    password = (data.get('password') or "").strip()
     parent_type = data.get('parent_type', 'user')
 
     if not email or not password:
         return jsonify({'status': 'fail', 'message': 'Email and password are required.'}), 400
 
-    # Query PasswordManager joined with VendorAccount (if vendor) or User
     if parent_type == 'vendor':
-        # Find vendor account by email
-        vendor_account = VendorAccount.query.filter_by(email=email).first()
+        vendor_account = (
+            VendorAccount.query
+            .filter(func.lower(VendorAccount.email) == email)
+            .first()
+        )
         if not vendor_account:
             return jsonify({'status': 'fail', 'message': 'Invalid credentials.'}), 401
 
-        # Find password manager for any vendor under that account
-        password_manager = (
+        password_row = (
             PasswordManager.query
-            .join(Vendor, Vendor.id == PasswordManager.parent_id)
+            .join(
+                Vendor,
+                and_(
+                    Vendor.id == PasswordManager.parent_id,
+                    PasswordManager.parent_type == 'vendor'
+                )
+            )
             .filter(
-                PasswordManager.parent_type == 'vendor',
                 Vendor.account_id == vendor_account.id
             )
+            .with_entities(PasswordManager.password)
             .first()
         )
     else:
-        # Implement user lookup similarly if needed
         return jsonify({'status': 'fail', 'message': 'User login not implemented yet.'}), 400
 
-    if not password_manager or password_manager.password != password:
-        # TODO: replace with hashed password verification
+    stored_password = password_row.password if password_row else None
+    if not _verify_password(stored_password, password):
         return jsonify({'status': 'fail', 'message': 'Invalid credentials.'}), 401
 
-    # On successful login: return all vendors associated with this VendorAccount
-    vendors = vendor_account.vendors
-    vendor_ids = [v.id for v in vendors]
-    pc_counts = {}
-    if vendor_ids:
-        pc_count_rows = (
-            Console.query
-            .with_entities(Console.vendor_id, func.count(Console.id))
-            .filter(
-                Console.vendor_id.in_(vendor_ids),
+    vendor_rows = (
+        Vendor.query
+        .outerjoin(
+            Console,
+            and_(
+                Console.vendor_id == Vendor.id,
                 func.lower(Console.console_type) == 'pc'
             )
-            .group_by(Console.vendor_id)
-            .all()
         )
-        pc_counts = {vendor_id: count for vendor_id, count in pc_count_rows}
+        .filter(Vendor.account_id == vendor_account.id)
+        .with_entities(
+            Vendor.id,
+            Vendor.cafe_name,
+            Vendor.owner_name,
+            Vendor.description,
+            func.count(Console.id).label("pc_count"),
+        )
+        .group_by(Vendor.id, Vendor.cafe_name, Vendor.owner_name, Vendor.description)
+        .all()
+    )
 
     vendor_list = [{
-        'id': v.id,
-        'cafe_name': v.cafe_name,
-        'owner_name': v.owner_name,
-        'description': v.description,
-        'pc_count': pc_counts.get(v.id, 0)
-    } for v in vendors]
+        'id': row.id,
+        'cafe_name': row.cafe_name,
+        'owner_name': row.owner_name,
+        'description': row.description,
+        'pc_count': int(row.pc_count or 0),
+    } for row in vendor_rows]
 
-    return jsonify({
+    response = jsonify({
         'status': 'success',
         'message': 'Login successful.',
         'vendors': vendor_list
-    }), 200
+    })
+    response.headers["X-Response-Time-ms"] = f"{(time.perf_counter() - started_at) * 1000:.2f}"
+
+    current_app.logger.info(
+        "login vendor success email=%s vendors=%s latency_ms=%.2f",
+        email,
+        len(vendor_list),
+        (time.perf_counter() - started_at) * 1000,
+    )
+
+    return response, 200
 
 @auth_bp.route('/validatePin', methods=['POST'])
 def validate_pin():
