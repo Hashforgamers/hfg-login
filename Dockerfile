@@ -17,4 +17,4 @@ COPY . /app
 EXPOSE 5055
 
 # Run the application with a production WSGI server
-CMD ["gunicorn", "-w", "2", "-k", "gthread", "--threads", "4", "-b", "0.0.0.0:5055", "--timeout", "30", "app:app"]
+CMD ["sh", "-c", "gunicorn -w 2 -k gthread --threads 4 -b 0.0.0.0:${PORT:-5055} --timeout 30 wsgi:app"]
