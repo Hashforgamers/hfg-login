@@ -16,6 +16,28 @@ from sqlalchemy import and_
 from werkzeug.security import check_password_hash
 
 auth_bp = Blueprint('auth', __name__)
+_PASSWORD_FLAG_COLUMN_READY = False
+
+
+def _ensure_password_force_change_column() -> None:
+    global _PASSWORD_FLAG_COLUMN_READY
+    if _PASSWORD_FLAG_COLUMN_READY:
+        return
+
+    try:
+        db.session.execute(
+            text(
+                """
+                ALTER TABLE password_manager
+                ADD COLUMN IF NOT EXISTS must_change_password BOOLEAN NOT NULL DEFAULT FALSE;
+                """
+            )
+        )
+        db.session.commit()
+        _PASSWORD_FLAG_COLUMN_READY = True
+    except Exception as exc:
+        db.session.rollback()
+        current_app.logger.warning("password_manager.must_change_password ensure failed: %s", exc)
 
 
 def _verify_password(stored_password: str, provided_password: str) -> bool:
@@ -93,6 +115,7 @@ def auth_health():
 
 @auth_bp.route('/login', methods=['POST'])
 def login_route():
+    _ensure_password_force_change_column()
     started_at = time.perf_counter()
     data = request.get_json(silent=True) or {}
     email = (data.get('email') or "").strip().lower()
@@ -123,7 +146,10 @@ def login_route():
             .filter(
                 Vendor.account_id == vendor_account.id
             )
-            .with_entities(PasswordManager.password)
+            .with_entities(
+                PasswordManager.password,
+                PasswordManager.must_change_password,
+            )
             .first()
         )
     else:
@@ -132,6 +158,13 @@ def login_route():
     stored_password = password_row.password if password_row else None
     if not _verify_password(stored_password, password):
         return jsonify({'status': 'fail', 'message': 'Invalid credentials.'}), 401
+
+    if password_row and bool(password_row.must_change_password):
+        return jsonify({
+            'status': 'password_change_required',
+            'message': 'Temporary password detected. Please set a new password to continue.',
+            'email': email,
+        }), 200
 
     vendor_rows = (
         Vendor.query
@@ -391,6 +424,7 @@ def verify_reset_code():
 # ─────────────────────────────────────────────────────────────
 @auth_bp.route('/reset-password', methods=['POST'])
 def reset_password():
+    _ensure_password_force_change_column()
     data             = request.get_json()
     email            = data.get('email', '').strip().lower()
     code             = data.get('code', '').strip()
@@ -432,6 +466,7 @@ def reset_password():
         ).first()
         if pm:
             pm.password = new_password   # plain text to match your current system
+            pm.must_change_password = False
             # ↑ Once you add hashing: generate_password_hash(new_password)
 
     reset_entry.is_used = True
@@ -440,4 +475,64 @@ def reset_password():
     return jsonify({
         'status' : 'success',
         'message': 'Password reset successfully. Please login.'
+    }), 200
+
+
+@auth_bp.route('/change-password', methods=['POST'])
+def change_password():
+    _ensure_password_force_change_column()
+    data = request.get_json(silent=True) or {}
+    email = (data.get('email') or '').strip().lower()
+    current_password = data.get('current_password', '')
+    new_password = data.get('new_password', '')
+    confirm_password = data.get('confirm_password', '')
+    parent_type = (data.get('parent_type') or 'vendor').strip().lower()
+
+    if parent_type != "vendor":
+        return jsonify({'status': 'fail', 'message': 'Only vendor password change is supported.'}), 400
+
+    if not all([email, current_password, new_password, confirm_password]):
+        return jsonify({'status': 'fail', 'message': 'All fields are required.'}), 400
+
+    if new_password != confirm_password:
+        return jsonify({'status': 'fail', 'message': 'Passwords do not match.'}), 400
+
+    if len(new_password) < 8:
+        return jsonify({'status': 'fail', 'message': 'Password must be at least 8 characters.'}), 400
+
+    vendor_account = (
+        VendorAccount.query
+        .filter(func.lower(VendorAccount.email) == email)
+        .first()
+    )
+    if not vendor_account:
+        return jsonify({'status': 'fail', 'message': 'Invalid credentials.'}), 401
+
+    rows = (
+        PasswordManager.query
+        .join(
+            Vendor,
+            and_(
+                Vendor.id == PasswordManager.parent_id,
+                PasswordManager.parent_type == 'vendor'
+            )
+        )
+        .filter(Vendor.account_id == vendor_account.id)
+        .all()
+    )
+    if not rows:
+        return jsonify({'status': 'fail', 'message': 'Invalid credentials.'}), 401
+
+    if not _verify_password(rows[0].password, current_password):
+        return jsonify({'status': 'fail', 'message': 'Current password is incorrect.'}), 401
+
+    for row in rows:
+        row.password = new_password
+        row.must_change_password = False
+
+    db.session.commit()
+
+    return jsonify({
+        'status': 'success',
+        'message': 'Password updated successfully. Please login again.'
     }), 200
