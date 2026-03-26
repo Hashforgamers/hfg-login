@@ -1,6 +1,7 @@
 import time
 import html
 import os
+import re
 from flask import Blueprint, request, jsonify, current_app
 from services.auth_services import invalidate_token
 from utils.jwt_helper import create_jwt_token
@@ -19,15 +20,25 @@ from werkzeug.security import check_password_hash
 
 auth_bp = Blueprint('auth', __name__)
 _PASSWORD_FLAG_COLUMN_READY = False
+DEFAULT_HASH_LOGO = "https://res.cloudinary.com/dxjjigepf/image/upload/v1774469992/hash_logo_fmngta.png"
+
+
+def _extract_body(content: str) -> str:
+    text = str(content or "")
+    match = re.search(r"<body[^>]*>(.*)</body>", text, flags=re.IGNORECASE | re.DOTALL)
+    if match:
+        return match.group(1)
+    return text
 
 
 def _build_hfg_email_template(subject: str, content_html: str, preview_text: str = "") -> str:
     logo_url = (
         os.getenv("HASH_EMAIL_LOGO_URL")
-        or "https://dashboard.hashforgamers.com/whitehashlogo.png"
+        or DEFAULT_HASH_LOGO
     ).strip()
     safe_subject = html.escape(subject or "Hash For Gamers")
     safe_preview = html.escape(preview_text or "")
+    inner = _extract_body(content_html)
     return f"""<!doctype html>
 <html>
   <head>
@@ -35,25 +46,26 @@ def _build_hfg_email_template(subject: str, content_html: str, preview_text: str
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{safe_subject}</title>
   </head>
-  <body style="margin:0;padding:0;background:#f3f4f6;font-family:Arial,Helvetica,sans-serif;color:#111827;">
+  <body style="margin:0;padding:0;background:#050912;font-family:Arial,Helvetica,sans-serif;color:#e5e7eb;">
     <div style="display:none;max-height:0;overflow:hidden;opacity:0;">{safe_preview}</div>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="padding:24px 12px;">
       <tr>
         <td align="center">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:620px;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:700px;background:#0b1220;border:1px solid #1e2a44;border-radius:12px;overflow:hidden;">
             <tr>
-              <td style="padding:20px 24px;background:#0b1220;color:#ffffff;">
-                <img src="{html.escape(logo_url)}" alt="Hash For Gamers" style="display:block;height:42px;width:auto;margin:0 0 10px 0;" />
+              <td style="padding:20px 24px;background:#050b18;color:#ffffff;">
+                <img src="{html.escape(logo_url)}" alt="Hash For Gamers" style="display:block;height:46px;width:auto;margin:0 0 10px 0;" />
                 <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#22c55e;font-weight:700;">Hash For Gamers</div>
                 <div style="margin-top:8px;font-size:22px;line-height:1.35;font-weight:700;">{safe_subject}</div>
               </td>
             </tr>
             <tr>
-              <td style="padding:24px;">{content_html}</td>
+              <td style="padding:24px;color:#e5e7eb;">{inner}</td>
             </tr>
             <tr>
-              <td style="padding:14px 24px;border-top:1px solid #e5e7eb;background:#f9fafb;color:#6b7280;font-size:12px;">
-                Need help? Contact <a href="mailto:support@hashforgamers.co.in" style="color:#2563eb;text-decoration:none;">support@hashforgamers.co.in</a>
+              <td style="padding:14px 24px;border-top:1px solid #1e2a44;background:#091122;color:#94a3b8;font-size:12px;">
+                Need help? Contact <a href="mailto:support@hashforgamers.co.in" style="color:#60a5fa;text-decoration:none;">support@hashforgamers.co.in</a><br/>
+                © 2026 Hash For Gamers. All rights reserved.
               </td>
             </tr>
           </table>
@@ -390,28 +402,24 @@ def forgot_password():
     # Send OTP email via SMTP2GO
     try:
         msg = Message(
-            subject    = 'HashForGamers – Password Reset Code',
-            recipients = [vendor_account.email]
+            subject='Hash For Gamers - Password Reset Code',
+            recipients=[vendor_account.email]
         )
         otp_html = f"""
-        <div style="font-family: Arial, sans-serif; max-width: 480px; 
-                    margin: auto; padding: 24px; background: #f9f9f9; 
-                    border-radius: 10px;">
-            <h2 style="color: #1a1a2e;">🎮 HashForGamers</h2>
-            <p>Hi <strong>{vendor_account.name or 'Vendor'}</strong>,</p>
-            <p>We received a request to reset your password. 
-               Use the code below — it expires in <strong>10 minutes</strong>.</p>
-            <div style="font-size: 40px; font-weight: bold; letter-spacing: 10px;
-                        color: #4F46E5; background: #fff; padding: 20px;
-                        border-radius: 8px; text-align: center; 
-                        border: 2px dashed #4F46E5; margin: 20px 0;">
+        <p style="margin:0 0 12px 0;color:#e5e7eb;">Hi <strong>{vendor_account.name or 'Vendor'}</strong>,</p>
+        <p style="margin:0 0 14px 0;color:#cbd5e1;line-height:1.7;">
+            We received a request to reset your password. Use the code below.
+            It expires in <strong>10 minutes</strong>.
+        </p>
+        <div style="font-size:40px;font-weight:700;letter-spacing:10px;
+                    color:#ffffff;background:#0a1f45;padding:20px;
+                    border-radius:8px;text-align:center;
+                    border:1px solid #1d4ed8;margin:16px 0;">
                 {code}
-            </div>
-            <p style="color: #666; font-size: 13px;">
-                If you did not request this, ignore this email. 
-                Your password will remain unchanged.
-            </p>
         </div>
+        <p style="margin:0;color:#94a3b8;font-size:13px;">
+            If you did not request this, ignore this email. Your password will remain unchanged.
+        </p>
         """
         msg.html = _build_hfg_email_template(
             subject=msg.subject,
