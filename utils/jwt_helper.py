@@ -10,15 +10,26 @@ BLACKLISTED_TOKENS = set()
 # Get the secret key from the Flask app config
 SECRET_KEY = os.getenv("JWT_SECRET_KEY", "dev")
 
-# Default expiration time for tokens (in minutes)
-DEFAULT_EXPIRATION_MINUTES = 60
+# Default expiration time for tokens (in hours)
+DEFAULT_EXPIRATION_HOURS = int(os.getenv("JWT_EXP_HOURS", "24") or 24)
 
-def create_jwt_token(identity):
+
+def _resolve_expiration_hours(expiration_hours=None):
+    try:
+        if expiration_hours is None:
+            return max(1, min(DEFAULT_EXPIRATION_HOURS, 168))
+        return max(1, min(int(expiration_hours), 168))
+    except (TypeError, ValueError):
+        return max(1, min(DEFAULT_EXPIRATION_HOURS, 168))
+
+
+def create_jwt_token(identity, expiration_hours=None):
     """Generate a JWT token."""
+    ttl_hours = _resolve_expiration_hours(expiration_hours)
     payload = {
         'sub': identity,
         'iat': datetime.utcnow(),
-        'exp': datetime.utcnow() + timedelta(hours=48)
+        'exp': datetime.utcnow() + timedelta(hours=ttl_hours)
     }
     return jwt.encode(payload, SECRET_KEY, algorithm='HS256')
 
@@ -85,7 +96,7 @@ def extract_token_from_header(auth_header):
     return auth_header.split(" ")[1]
 
 
-def refresh_token(old_token):
+def refresh_token(old_token, expiration_hours=None):
     """
     Refresh a JWT token by generating a new token with the same payload.
 
@@ -94,6 +105,7 @@ def refresh_token(old_token):
     :raises: Unauthorized if the old token is invalid or expired.
     """
     decoded_payload = decode_token(old_token)
-    # Remove 'exp' from the payload if present to avoid conflicts
-    decoded_payload.pop('exp', None)
-    return generate_token(decoded_payload)
+    identity = decoded_payload.get('sub')
+    if identity is None:
+        raise Unauthorized("Invalid token payload.")
+    return create_jwt_token(identity=identity, expiration_hours=expiration_hours)
