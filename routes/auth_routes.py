@@ -4,7 +4,7 @@ import os
 import re
 from flask import Blueprint, request, jsonify, current_app
 from services.auth_services import invalidate_token
-from utils.jwt_helper import create_jwt_token
+from utils.jwt_helper import create_jwt_token, refresh_token, DEFAULT_EXPIRATION_HOURS
 from flask_mail import Message
 from datetime import datetime, timedelta
 from app.extension import mail,db
@@ -313,7 +313,7 @@ def validate_pin():
         'message': 'PIN validated successfully.',
         'data': {
             'token': token,
-            'expires_in': 3600 * 4
+            'expires_in': 3600 * DEFAULT_EXPIRATION_HOURS
         }
     })
     response.headers["X-Response-Time-ms"] = f"{(time.perf_counter() - started_at) * 1000:.2f}"
@@ -325,6 +325,31 @@ def validate_pin():
     )
 
     return response, 200
+
+
+@auth_bp.route('/refresh-token', methods=['POST'])
+def refresh_token_route():
+    auth_header = request.headers.get('Authorization')
+    if not auth_header or not auth_header.startswith('Bearer '):
+        return jsonify({'status': 'fail', 'message': 'Token is missing or invalid.'}), 401
+
+    old_token = auth_header.split(" ", 1)[1].strip()
+    if not old_token:
+        return jsonify({'status': 'fail', 'message': 'Token is missing or invalid.'}), 401
+
+    try:
+        token = refresh_token(old_token)
+    except Exception:
+        return jsonify({'status': 'fail', 'message': 'Invalid or expired token.'}), 401
+
+    return jsonify({
+        'status': 'success',
+        'message': 'Token refreshed successfully.',
+        'data': {
+            'token': token,
+            'expires_in': 3600 * DEFAULT_EXPIRATION_HOURS
+        }
+    }), 200
 
 
 @auth_bp.route('/logout', methods=['POST'])
