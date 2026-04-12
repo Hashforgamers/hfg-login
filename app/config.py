@@ -3,6 +3,7 @@
 import os
 
 class Config:
+    APP_ENV = os.getenv("APP_ENV", os.getenv("FLASK_ENV", "development")).lower()
     SECRET_KEY = os.getenv('SECRET_KEY', 'dev-secret-change-me')
     JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY', 'dev-jwt-secret-change-me')
 
@@ -23,6 +24,7 @@ class Config:
     SQLALCHEMY_ECHO = os.getenv("SQLALCHEMY_ECHO", "false").lower() == "true"
 
     # Redis Configuration
+    REDIS_URL = os.getenv("REDIS_URL")
     REDIS_HOST = os.getenv('REDIS_HOST', 'localhost')
     REDIS_PORT = int(os.getenv('REDIS_PORT', 6379))
     REDIS_DB = int(os.getenv('REDIS_DB', 0))
@@ -37,3 +39,7 @@ class Config:
 
     CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS", "*")
     DEBUG_MODE = os.getenv("DEBUG_MODE", "false").lower() == "true"
+    API_ENABLE_TIMING_HEADERS = os.getenv("API_ENABLE_TIMING_HEADERS", "true").lower() in ("true", "1", "t", "yes", "y")
+    API_SLOW_REQUEST_MS = int(os.getenv("API_SLOW_REQUEST_MS", "120") or 120)
+    API_DEFAULT_CACHE_CONTROL = os.getenv("API_DEFAULT_CACHE_CONTROL", "no-store")
+    TRUST_PROXY = os.getenv("TRUST_PROXY", "true").lower() in ("true", "1", "t", "yes", "y")
