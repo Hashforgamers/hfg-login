@@ -1,0 +1,2937 @@
+{
+  "nodes": [
+    {
+      "id": "app",
+      "label": "app.py",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_init",
+      "label": "app/__init__.py",
+      "file_type": "code",
+      "source_file": "app/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_init_is_insecure_secret",
+      "label": "_is_insecure_secret()",
+      "file_type": "code",
+      "source_file": "app/__init__.py",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_init_validate_production_config",
+      "label": "_validate_production_config()",
+      "file_type": "code",
+      "source_file": "app/__init__.py",
+      "source_location": "L23",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_init_py_flask",
+      "label": "Flask",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_init_create_app",
+      "label": "create_app()",
+      "file_type": "code",
+      "source_file": "app/__init__.py",
+      "source_location": "L41",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_config",
+      "label": "config.py",
+      "file_type": "code",
+      "source_file": "app/config.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_config_config",
+      "label": "Config",
+      "file_type": "code",
+      "source_file": "app/config.py",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_extension",
+      "label": "extension.py",
+      "file_type": "code",
+      "source_file": "app/extension.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_extension_configure_redis",
+      "label": "configure_redis()",
+      "file_type": "code",
+      "source_file": "app/extension.py",
+      "source_location": "L13",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_extension_py_flask",
+      "label": "Flask",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_extension_rationale_14",
+      "label": "Configures the Redis client with the app configuration.",
+      "file_type": "rationale",
+      "source_file": "app/extension.py",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_init",
+      "label": "models/__init__.py",
+      "file_type": "code",
+      "source_file": "models/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_console",
+      "label": "console.py",
+      "file_type": "code",
+      "source_file": "models/console.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_console_console",
+      "label": "Console",
+      "file_type": "code",
+      "source_file": "models/console.py",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_console_console_repr",
+      "label": ".__repr__()",
+      "file_type": "code",
+      "source_file": "models/console.py",
+      "source_location": "L22",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_contactinfo",
+      "label": "contactInfo.py",
+      "file_type": "code",
+      "source_file": "models/contactInfo.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_contactinfo_contactinfo",
+      "label": "ContactInfo",
+      "file_type": "code",
+      "source_file": "models/contactInfo.py",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_passwordmanager",
+      "label": "passwordManager.py",
+      "file_type": "code",
+      "source_file": "models/passwordManager.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_passwordmanager_passwordmanager",
+      "label": "PasswordManager",
+      "file_type": "code",
+      "source_file": "models/passwordManager.py",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_passwordresetcode",
+      "label": "passwordResetCode.py",
+      "file_type": "code",
+      "source_file": "models/passwordResetCode.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_passwordresetcode_passwordresetcode",
+      "label": "PasswordResetCode",
+      "file_type": "code",
+      "source_file": "models/passwordResetCode.py",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_passwordresetcode_passwordresetcode_generate_code",
+      "label": ".generate_code()",
+      "file_type": "code",
+      "source_file": "models/passwordResetCode.py",
+      "source_location": "L22",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_passwordresetcode_passwordresetcode_is_valid",
+      "label": ".is_valid()",
+      "file_type": "code",
+      "source_file": "models/passwordResetCode.py",
+      "source_location": "L25",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_user",
+      "label": "user.py",
+      "file_type": "code",
+      "source_file": "models/user.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_user_user",
+      "label": "User",
+      "file_type": "code",
+      "source_file": "models/user.py",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_vendor",
+      "label": "vendor.py",
+      "file_type": "code",
+      "source_file": "models/vendor.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_vendor_vendor",
+      "label": "Vendor",
+      "file_type": "code",
+      "source_file": "models/vendor.py",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_vendoraccount",
+      "label": "vendorAccount.py",
+      "file_type": "code",
+      "source_file": "models/vendorAccount.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_vendoraccount_vendoraccount",
+      "label": "VendorAccount",
+      "file_type": "code",
+      "source_file": "models/vendorAccount.py",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_vendorpin",
+      "label": "vendorPin.py",
+      "file_type": "code",
+      "source_file": "models/vendorPin.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_vendorpin_vendorpin",
+      "label": "VendorPin",
+      "file_type": "code",
+      "source_file": "models/vendorPin.py",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_vendorpin_vendorpin_repr",
+      "label": ".__repr__()",
+      "file_type": "code",
+      "source_file": "models/vendorPin.py",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_vendorstatus",
+      "label": "vendorStatus.py",
+      "file_type": "code",
+      "source_file": "models/vendorStatus.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_vendorstatus_vendorstatus",
+      "label": "VendorStatus",
+      "file_type": "code",
+      "source_file": "models/vendorStatus.py",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_init",
+      "label": "routes/__init__.py",
+      "file_type": "code",
+      "source_file": "routes/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes",
+      "label": "auth_routes.py",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes_extract_body",
+      "label": "_extract_body()",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes_build_hfg_email_template",
+      "label": "_build_hfg_email_template()",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L34",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes_ensure_password_force_change_column",
+      "label": "_ensure_password_force_change_column()",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L79",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes_verify_password",
+      "label": "_verify_password()",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L100",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes_verify_pin",
+      "label": "_verify_pin()",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L111",
+      "_origin": "ast"
+    },
+    {
+      "id": "route",
+      "label": "route",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes_auth_health",
+      "label": "auth_health()",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L158",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes_login_route",
+      "label": "login_route()",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L174",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes_validate_pin",
+      "label": "validate_pin()",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L272",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes_refresh_token_route",
+      "label": "refresh_token_route()",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L331",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes_logout_route",
+      "label": "logout_route()",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L356",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes_forgot_password",
+      "label": "forgot_password()",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L392",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes_verify_reset_code",
+      "label": "verify_reset_code()",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L471",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes_reset_password",
+      "label": "reset_password()",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L509",
+      "_origin": "ast"
+    },
+    {
+      "id": "routes_auth_routes_change_password",
+      "label": "change_password()",
+      "file_type": "code",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L565",
+      "_origin": "ast"
+    },
+    {
+      "id": "services_init",
+      "label": "services/__init__.py",
+      "file_type": "code",
+      "source_file": "services/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "services_auth_services",
+      "label": "auth_services.py",
+      "file_type": "code",
+      "source_file": "services/auth_services.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "services_auth_services_generate_token_for_vendor",
+      "label": "generate_token_for_vendor()",
+      "file_type": "code",
+      "source_file": "services/auth_services.py",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "services_auth_services_login",
+      "label": "login()",
+      "file_type": "code",
+      "source_file": "services/auth_services.py",
+      "source_location": "L35",
+      "_origin": "ast"
+    },
+    {
+      "id": "services_auth_services_invalidate_token",
+      "label": "invalidate_token()",
+      "file_type": "code",
+      "source_file": "services/auth_services.py",
+      "source_location": "L83",
+      "_origin": "ast"
+    },
+    {
+      "id": "services_auth_services_rationale_13",
+      "label": "Generate JWT token directly from vendor_id and parent_type.",
+      "file_type": "rationale",
+      "source_file": "services/auth_services.py",
+      "source_location": "L13",
+      "_origin": "ast"
+    },
+    {
+      "id": "services_auth_services_rationale_36",
+      "label": "Authenticate a user or vendor and return a JWT token.",
+      "file_type": "rationale",
+      "source_file": "services/auth_services.py",
+      "source_location": "L36",
+      "_origin": "ast"
+    },
+    {
+      "id": "services_auth_services_rationale_84",
+      "label": "Invalidate a JWT token by adding it to the blacklist. :param token: The JWT\u2026",
+      "file_type": "rationale",
+      "source_file": "services/auth_services.py",
+      "source_location": "L84",
+      "_origin": "ast"
+    },
+    {
+      "id": "sql_20260305_login_perf_indexes",
+      "label": "20260305_login_perf_indexes.sql",
+      "file_type": "code",
+      "source_file": "sql/20260305_login_perf_indexes.sql",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "sql_20260324_password_force_change_flag",
+      "label": "20260324_password_force_change_flag.sql",
+      "file_type": "code",
+      "source_file": "sql/20260324_password_force_change_flag.sql",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "password_manager",
+      "label": "password_manager",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_init",
+      "label": "utils/__init__.py",
+      "file_type": "code",
+      "source_file": "utils/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper",
+      "label": "jwt_helper.py",
+      "file_type": "code",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_resolve_expiration_hours",
+      "label": "_resolve_expiration_hours()",
+      "file_type": "code",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_create_jwt_token",
+      "label": "create_jwt_token()",
+      "file_type": "code",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_decode_token",
+      "label": "decode_token()",
+      "file_type": "code",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L37",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_validate_token",
+      "label": "validate_token()",
+      "file_type": "code",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L54",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_is_token_blacklisted",
+      "label": "is_token_blacklisted()",
+      "file_type": "code",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L67",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_revoke_token",
+      "label": "revoke_token()",
+      "file_type": "code",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L77",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_extract_token_from_header",
+      "label": "extract_token_from_header()",
+      "file_type": "code",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L86",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_refresh_token",
+      "label": "refresh_token()",
+      "file_type": "code",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L99",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_rationale_27",
+      "label": "Generate a JWT token.",
+      "file_type": "rationale",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_rationale_38",
+      "label": "Decode a JWT token. :param token: Encoded JWT token as a string. :return:\u2026",
+      "file_type": "rationale",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L38",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_rationale_55",
+      "label": "Validate the given token by decoding it and checking if it's blacklisted.\u2026",
+      "file_type": "rationale",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L55",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_rationale_68",
+      "label": "Check if the token is blacklisted. :param token: JWT token as a string.\u2026",
+      "file_type": "rationale",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L68",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_rationale_78",
+      "label": "Revoke a token by adding it to a blacklist. :param token: JWT token as a string.",
+      "file_type": "rationale",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L78",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_rationale_87",
+      "label": "Extract the token from the Authorization header. :param auth_header: The\u2026",
+      "file_type": "rationale",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L87",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_jwt_helper_rationale_100",
+      "label": "Refresh a JWT token by generating a new token with the same payload. :param\u2026",
+      "file_type": "rationale",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L100",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_token_blacklist",
+      "label": "token_blacklist.py",
+      "file_type": "code",
+      "source_file": "utils/token_blacklist.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_token_blacklist_add_to_blacklist",
+      "label": "add_to_blacklist()",
+      "file_type": "code",
+      "source_file": "utils/token_blacklist.py",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "utils_token_blacklist_rationale_15",
+      "label": "Add a token to the Redis blacklist. :param token: The JWT token to blacklist.\u2026",
+      "file_type": "rationale",
+      "source_file": "utils/token_blacklist.py",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "wsgi",
+      "label": "wsgi.py",
+      "file_type": "code",
+      "source_file": "wsgi.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    }
+  ],
+  "edges": [
+    {
+      "source": "app",
+      "target": "app",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "time",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "uuid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "app_init_py_flask",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "routes_auth_routes",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "app_config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "app_extension",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "flask_cors",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "werkzeug_middleware_proxy_fix",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "app_init_is_insecure_secret",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "app_init_validate_production_config",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init_validate_production_config",
+      "target": "app_init_py_flask",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "app_init_create_app",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init_validate_production_config",
+      "target": "app_init_is_insecure_secret",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init_create_app",
+      "target": "app_init_py_flask",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init_create_app",
+      "target": "app_init_validate_production_config",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_config",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/config.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_config",
+      "target": "app_config_config",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/config.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_extension",
+      "target": "app_extension_py_flask",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/extension.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_extension",
+      "target": "flask_sqlalchemy",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/extension.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_extension",
+      "target": "flask_migrate",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/extension.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_extension",
+      "target": "flask_mail",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/extension.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_extension",
+      "target": "redis",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/extension.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_extension",
+      "target": "app_extension_configure_redis",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/extension.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_extension_configure_redis",
+      "target": "app_extension_py_flask",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "app/extension.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_extension_rationale_14",
+      "target": "app_extension_configure_redis",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app/extension.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_console",
+      "target": "sqlalchemy",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/console.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_console",
+      "target": "sqlalchemy_orm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/console.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_console",
+      "target": "app_extension",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/console.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_console",
+      "target": "models_console_console",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models/console.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_console_console",
+      "target": "models_console_console_repr",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "models/console.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_contactinfo",
+      "target": "sqlalchemy",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/contactInfo.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_contactinfo",
+      "target": "sqlalchemy_orm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/contactInfo.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_contactinfo",
+      "target": "app_extension",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/contactInfo.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_contactinfo",
+      "target": "models_contactinfo_contactinfo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models/contactInfo.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_passwordmanager",
+      "target": "sqlalchemy_orm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/passwordManager.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_passwordmanager",
+      "target": "sqlalchemy",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/passwordManager.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_passwordmanager",
+      "target": "app_extension",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/passwordManager.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_passwordmanager",
+      "target": "sqlalchemy_ext_declarative",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/passwordManager.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_passwordmanager",
+      "target": "models_passwordmanager_passwordmanager",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models/passwordManager.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_passwordresetcode",
+      "target": "random",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/passwordResetCode.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_passwordresetcode",
+      "target": "string",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/passwordResetCode.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_passwordresetcode",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/passwordResetCode.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_passwordresetcode",
+      "target": "app_extension",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/passwordResetCode.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_passwordresetcode",
+      "target": "models_passwordresetcode_passwordresetcode",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models/passwordResetCode.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_passwordresetcode_passwordresetcode",
+      "target": "models_passwordresetcode_passwordresetcode_generate_code",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "models/passwordResetCode.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_passwordresetcode_passwordresetcode",
+      "target": "models_passwordresetcode_passwordresetcode_is_valid",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "models/passwordResetCode.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_user",
+      "target": "sqlalchemy",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/user.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_user",
+      "target": "sqlalchemy_orm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/user.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_user",
+      "target": "models_passwordmanager",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/user.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_user",
+      "target": "app_extension",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/user.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_user",
+      "target": "models_user_user",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models/user.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendor",
+      "target": "sqlalchemy",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendor.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendor",
+      "target": "sqlalchemy_orm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendor.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendor",
+      "target": "app_extension",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendor.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendor",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendor.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendor",
+      "target": "models_vendoraccount",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendor.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendor",
+      "target": "models_vendorpin",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendor.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendor",
+      "target": "models_vendor_vendor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendor.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendoraccount",
+      "target": "sqlalchemy",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorAccount.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendoraccount",
+      "target": "sqlalchemy_orm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorAccount.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendoraccount",
+      "target": "app_extension",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorAccount.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendoraccount",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorAccount.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendoraccount",
+      "target": "models_vendoraccount_vendoraccount",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorAccount.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendorpin",
+      "target": "sqlalchemy",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorPin.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendorpin",
+      "target": "sqlalchemy_orm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorPin.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendorpin",
+      "target": "app_extension",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorPin.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendorpin",
+      "target": "models_vendorpin_vendorpin",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorPin.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendorpin_vendorpin",
+      "target": "models_vendorpin_vendorpin_repr",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorPin.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendorstatus",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorStatus.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendorstatus",
+      "target": "sqlalchemy",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorStatus.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendorstatus",
+      "target": "sqlalchemy_orm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorStatus.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendorstatus",
+      "target": "app_extension",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorStatus.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendorstatus",
+      "target": "models_vendorstatus_vendorstatus",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendorStatus.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "time",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "html",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "re",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "flask",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "services_auth_services",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "utils_jwt_helper",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "flask_mail",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "app_extension",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "models_passwordresetcode",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "models_vendoraccount",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "models_vendorpin",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "models_vendor",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "models_passwordmanager",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "models_console",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "sqlalchemy",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "werkzeug_security",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "routes_auth_routes_extract_body",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "routes_auth_routes_build_hfg_email_template",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "routes_auth_routes_ensure_password_force_change_column",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "routes_auth_routes_verify_password",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "routes_auth_routes_verify_pin",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L111",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_auth_health",
+      "target": "route",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L157",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "routes_auth_routes_auth_health",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L158",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_login_route",
+      "target": "route",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L173",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "routes_auth_routes_login_route",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L174",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_validate_pin",
+      "target": "route",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L271",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "routes_auth_routes_validate_pin",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L272",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_refresh_token_route",
+      "target": "route",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L330",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "routes_auth_routes_refresh_token_route",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L331",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_logout_route",
+      "target": "route",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L355",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "routes_auth_routes_logout_route",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L356",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_forgot_password",
+      "target": "route",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L391",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "routes_auth_routes_forgot_password",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L392",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_verify_reset_code",
+      "target": "route",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L470",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "routes_auth_routes_verify_reset_code",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L471",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_reset_password",
+      "target": "route",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L508",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "routes_auth_routes_reset_password",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L509",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_change_password",
+      "target": "route",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L564",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "routes_auth_routes_change_password",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L565",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_build_hfg_email_template",
+      "target": "routes_auth_routes_extract_body",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_login_route",
+      "target": "routes_auth_routes_ensure_password_force_change_column",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L175",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_login_route",
+      "target": "routes_auth_routes_verify_password",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L216",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_validate_pin",
+      "target": "routes_auth_routes_verify_pin",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L302",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_forgot_password",
+      "target": "routes_auth_routes_build_hfg_email_template",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L449",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_reset_password",
+      "target": "routes_auth_routes_ensure_password_force_change_column",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L510",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_change_password",
+      "target": "routes_auth_routes_ensure_password_force_change_column",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L566",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_change_password",
+      "target": "routes_auth_routes_verify_password",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L609",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "werkzeug_security",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "models_user",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "models_vendor",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "models_contactinfo",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "models_passwordmanager",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "utils_jwt_helper",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "app_extension",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "sqlalchemy",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "flask",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "utils_token_blacklist",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "services_auth_services_generate_token_for_vendor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "services_auth_services_login",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "services_auth_services_invalidate_token",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services_rationale_13",
+      "target": "services_auth_services_generate_token_for_vendor",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services_rationale_36",
+      "target": "services_auth_services_login",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services_rationale_84",
+      "target": "services_auth_services_invalidate_token",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper",
+      "target": "jwt",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper",
+      "target": "flask",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper",
+      "target": "werkzeug_exceptions",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper",
+      "target": "utils_jwt_helper_resolve_expiration_hours",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper",
+      "target": "utils_jwt_helper_create_jwt_token",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper",
+      "target": "utils_jwt_helper_decode_token",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper",
+      "target": "utils_jwt_helper_validate_token",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper",
+      "target": "utils_jwt_helper_is_token_blacklisted",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper",
+      "target": "utils_jwt_helper_revoke_token",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper",
+      "target": "utils_jwt_helper_extract_token_from_header",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper",
+      "target": "utils_jwt_helper_refresh_token",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper_create_jwt_token",
+      "target": "utils_jwt_helper_resolve_expiration_hours",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper_validate_token",
+      "target": "utils_jwt_helper_is_token_blacklisted",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper_validate_token",
+      "target": "utils_jwt_helper_decode_token",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper_refresh_token",
+      "target": "utils_jwt_helper_decode_token",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper_refresh_token",
+      "target": "utils_jwt_helper_create_jwt_token",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L111",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper_rationale_27",
+      "target": "utils_jwt_helper_create_jwt_token",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper_rationale_38",
+      "target": "utils_jwt_helper_decode_token",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper_rationale_55",
+      "target": "utils_jwt_helper_validate_token",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper_rationale_68",
+      "target": "utils_jwt_helper_is_token_blacklisted",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper_rationale_78",
+      "target": "utils_jwt_helper_revoke_token",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper_rationale_87",
+      "target": "utils_jwt_helper_extract_token_from_header",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_jwt_helper_rationale_100",
+      "target": "utils_jwt_helper_refresh_token",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/jwt_helper.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_token_blacklist",
+      "target": "flask",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/token_blacklist.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_token_blacklist",
+      "target": "redis",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/token_blacklist.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_token_blacklist",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/token_blacklist.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_token_blacklist",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/token_blacklist.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_token_blacklist",
+      "target": "utils_token_blacklist_add_to_blacklist",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/token_blacklist.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "utils_token_blacklist_rationale_15",
+      "target": "utils_token_blacklist_add_to_blacklist",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "utils/token_blacklist.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "wsgi",
+      "target": "app",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "wsgi.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "routes_auth_routes",
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "app_config",
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "app_extension",
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app",
+      "target": "app_init_create_app",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "app_config_config",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init",
+      "target": "app_extension_configure_redis",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_user",
+      "target": "models_passwordmanager_passwordmanager",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/user.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendor",
+      "target": "models_vendoraccount_vendoraccount",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendor.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendor",
+      "target": "models_vendorpin_vendorpin",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "models/vendor.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "services_auth_services_invalidate_token",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "utils_jwt_helper_create_jwt_token",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "utils_jwt_helper_refresh_token",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "models_passwordresetcode_passwordresetcode",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "models_vendoraccount_vendoraccount",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "models_vendorpin_vendorpin",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "models_vendor_vendor",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "models_passwordmanager_passwordmanager",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes",
+      "target": "models_console_console",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "models_user_user",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "models_vendor_vendor",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "models_contactinfo_contactinfo",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "models_passwordmanager_passwordmanager",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "utils_jwt_helper_create_jwt_token",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services",
+      "target": "utils_token_blacklist_add_to_blacklist",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "wsgi",
+      "target": "app_init_create_app",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "wsgi.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "app_init_create_app",
+      "target": "app_extension_configure_redis",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/__init__.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services_generate_token_for_vendor",
+      "target": "utils_jwt_helper_create_jwt_token",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services_login",
+      "target": "utils_jwt_helper_create_jwt_token",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "services_auth_services_invalidate_token",
+      "target": "utils_token_blacklist_add_to_blacklist",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "services/auth_services.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_user_user",
+      "target": "models_passwordmanager_passwordmanager",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "models/user.py",
+      "source_location": "L3",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendor_vendor",
+      "target": "models_vendoraccount_vendoraccount",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "models/vendor.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "models_vendor_vendor",
+      "target": "models_vendorpin_vendorpin",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "models/vendor.py",
+      "source_location": "L6",
+      "weight": 0.8,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_validate_pin",
+      "target": "utils_jwt_helper_create_jwt_token",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L305",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_refresh_token_route",
+      "target": "utils_jwt_helper_refresh_token",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L341",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_logout_route",
+      "target": "services_auth_services_invalidate_token",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L371",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_forgot_password",
+      "target": "models_passwordresetcode_passwordresetcode",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L419",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "routes_auth_routes_forgot_password",
+      "target": "models_passwordresetcode_passwordresetcode_generate_code",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "routes/auth_routes.py",
+      "source_location": "L416",
+      "weight": 1.0,
+      "_origin": "ast"
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
