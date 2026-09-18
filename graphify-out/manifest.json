@@ -80,9 +80,9 @@
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "routes/auth_routes.py": {
-    "mtime": 1783791763.4987268,
-    "ast_hash": "a9e0bf331d77fc5779d7e3d2ae5f2f22",
-    "semantic_hash": "a9e0bf331d77fc5779d7e3d2ae5f2f22"
+    "mtime": 1789754793.9465494,
+    "ast_hash": "cc6bfce0ecf4813df21679d7cb4b5d37",
+    "semantic_hash": ""
   },
   "services/__init__.py": {
     "mtime": 1737746776.717768,
@@ -123,5 +123,30 @@
     "mtime": 1772739050.0563557,
     "ast_hash": "bd6e9bf12af6b44d056a53eaf36e68bc",
     "semantic_hash": "bd6e9bf12af6b44d056a53eaf36e68bc"
+  },
+  "services/email_template.py": {
+    "mtime": 1789754839.0162477,
+    "ast_hash": "70eca276c90ec7202a64f4e2acd55b74",
+    "semantic_hash": ""
+  },
+  ".github/workflows/deploy-login.yml": {
+    "mtime": 1772732234.4079478,
+    "ast_hash": "e776415835df659080fd65f1fff6aa29",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1785604351.4782867,
+    "ast_hash": "6a47d64fcc136324ca395065a707ef76",
+    "semantic_hash": ""
+  },
+  "docker-compose.yml": {
+    "mtime": 1772732234.4107,
+    "ast_hash": "173bb226adc8f441961dd09274d217c1",
+    "semantic_hash": ""
+  },
+  "requirements.txt": {
+    "mtime": 1772732234.4875653,
+    "ast_hash": "bbc3d76e529c612706a436f75db5b225",
+    "semantic_hash": ""
   }
 }

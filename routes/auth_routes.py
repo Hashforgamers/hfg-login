@@ -20,60 +20,11 @@ from werkzeug.security import check_password_hash
 
 auth_bp = Blueprint('auth', __name__)
 _PASSWORD_FLAG_COLUMN_READY = False
-DEFAULT_HASH_LOGO = "https://res.cloudinary.com/dxjjigepf/image/upload/v1774472024/hash_for_gamer_logo_d1v4wc.png"
-
-
-def _extract_body(content: str) -> str:
-    text = str(content or "")
-    match = re.search(r"<body[^>]*>(.*)</body>", text, flags=re.IGNORECASE | re.DOTALL)
-    if match:
-        return match.group(1)
-    return text
+from services.email_template import build_hfg_email_html, email_text
 
 
 def _build_hfg_email_template(subject: str, content_html: str, preview_text: str = "") -> str:
-    logo_url = (
-        os.getenv("HASH_EMAIL_LOGO_URL")
-        or DEFAULT_HASH_LOGO
-    ).strip()
-    safe_subject = html.escape(subject or "Hash For Gamers")
-    safe_preview = html.escape(preview_text or "")
-    inner = _extract_body(content_html)
-    return f"""<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{safe_subject}</title>
-  </head>
-  <body style="margin:0;padding:0;background:#050912;font-family:Arial,Helvetica,sans-serif;color:#e5e7eb;">
-    <div style="display:none;max-height:0;overflow:hidden;opacity:0;">{safe_preview}</div>
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="padding:24px 12px;">
-      <tr>
-        <td align="center">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:700px;background:#0b1220;border:1px solid #1e2a44;border-radius:12px;overflow:hidden;">
-            <tr>
-              <td style="padding:20px 24px;background:linear-gradient(180deg,#040915,#0b1220);color:#ffffff;">
-                <img src="{html.escape(logo_url)}" alt="Hash For Gamers" style="display:block;height:52px;width:auto;margin:0 0 10px 0;border-radius:10px;" />
-                <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#22c55e;font-weight:700;">Hash For Gamers</div>
-                <div style="margin-top:8px;font-size:22px;line-height:1.35;font-weight:700;">{safe_subject}</div>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:24px;color:#e5e7eb;">{inner}</td>
-            </tr>
-            <tr>
-              <td style="padding:14px 24px;border-top:1px solid #1e2a44;background:#091122;color:#94a3b8;font-size:12px;">
-                Need help? Contact <a href="mailto:support@hashforgamers.co.in" style="color:#60a5fa;text-decoration:none;">support@hashforgamers.co.in</a><br/>
-                © 2026 Hash For Gamers. All rights reserved.
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </body>
-</html>"""
+    return build_hfg_email_html(subject, content_html, preview_text)
 
 
 def _ensure_password_force_change_column() -> None:
@@ -427,16 +378,16 @@ def forgot_password():
     # Send OTP email via SMTP2GO
     try:
         msg = Message(
-            subject='Hash For Gamers - Password Reset Code',
+            subject='Reset your password | Hash For Gamers',
             recipients=[vendor_account.email]
         )
         otp_html = f"""
-        <p style="margin:0 0 12px 0;color:#e5e7eb;">Hi <strong>{vendor_account.name or 'Vendor'}</strong>,</p>
+        <p style="margin:0 0 12px 0;color:#e5e7eb;">Hello <strong>{html.escape(vendor_account.name or 'Cafe owner')}</strong>,</p>
         <p style="margin:0 0 14px 0;color:#cbd5e1;line-height:1.7;">
             We received a request to reset your password. Use the code below.
             It expires in <strong>10 minutes</strong>.
         </p>
-        <div style="font-size:40px;font-weight:700;letter-spacing:10px;
+        <div style="font-size:30px;font-weight:700;letter-spacing:5px;
                     color:#ffffff;background:#0a1f45;padding:20px;
                     border-radius:8px;text-align:center;
                     border:1px solid #1d4ed8;margin:16px 0;">
@@ -446,10 +397,11 @@ def forgot_password():
             If you did not request this, ignore this email. Your password will remain unchanged.
         </p>
         """
+        msg.body = email_text(otp_html)
         msg.html = _build_hfg_email_template(
             subject=msg.subject,
             content_html=otp_html,
-            preview_text=f"Your password reset code is {code}",
+            preview_text="Use your verification code to reset your password. Valid for 10 minutes.",
         )
         mail.send(msg)
     except Exception as e:
