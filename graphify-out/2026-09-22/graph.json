@@ -11,7 +11,7 @@
       "_origin": "ast",
       "id": "app",
       "community": 5,
-      "community_name": "extension.py",
+      "community_name": "app/__init__.py",
       "norm_label": "app.py"
     },
     {
@@ -22,7 +22,7 @@
       "_origin": "ast",
       "id": "app_init",
       "community": 5,
-      "community_name": "extension.py",
+      "community_name": "app/__init__.py",
       "norm_label": "app/__init__.py"
     },
     {
@@ -33,7 +33,7 @@
       "_origin": "ast",
       "id": "app_init_is_insecure_secret",
       "community": 5,
-      "community_name": "extension.py",
+      "community_name": "app/__init__.py",
       "norm_label": "_is_insecure_secret()"
     },
     {
@@ -44,7 +44,7 @@
       "_origin": "ast",
       "id": "app_init_validate_production_config",
       "community": 5,
-      "community_name": "extension.py",
+      "community_name": "app/__init__.py",
       "norm_label": "_validate_production_config()"
     },
     {
@@ -55,7 +55,7 @@
       "_origin": "ast",
       "id": "app_init_py_flask",
       "community": 5,
-      "community_name": "extension.py",
+      "community_name": "app/__init__.py",
       "norm_label": "flask"
     },
     {
@@ -66,7 +66,7 @@
       "_origin": "ast",
       "id": "app_init_create_app",
       "community": 5,
-      "community_name": "extension.py",
+      "community_name": "app/__init__.py",
       "norm_label": "create_app()"
     },
     {
@@ -77,7 +77,7 @@
       "_origin": "ast",
       "id": "app_config",
       "community": 5,
-      "community_name": "extension.py",
+      "community_name": "app/__init__.py",
       "norm_label": "config.py"
     },
     {
@@ -88,7 +88,7 @@
       "_origin": "ast",
       "id": "app_config_config",
       "community": 5,
-      "community_name": "extension.py",
+      "community_name": "app/__init__.py",
       "norm_label": "config"
     },
     {
@@ -98,7 +98,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_extension",
-      "community": 5,
+      "community": 2,
       "community_name": "extension.py",
       "norm_label": "extension.py"
     },
@@ -109,7 +109,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "app_extension_configure_redis",
-      "community": 5,
+      "community": 2,
       "community_name": "extension.py",
       "norm_label": "configure_redis()"
     },
@@ -120,7 +120,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "app_extension_py_flask",
-      "community": 5,
+      "community": 2,
       "community_name": "extension.py",
       "norm_label": "flask"
     },
@@ -131,7 +131,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "app_extension_rationale_14",
-      "community": 5,
+      "community": 2,
       "community_name": "extension.py",
       "norm_label": "configures the redis client with the app configuration."
     },
@@ -153,8 +153,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_console",
-      "community": 15,
-      "community_name": "console.py",
+      "community": 2,
+      "community_name": "extension.py",
       "norm_label": "console.py"
     },
     {
@@ -164,8 +164,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "models_console_console",
-      "community": 15,
-      "community_name": "console.py",
+      "community": 2,
+      "community_name": "extension.py",
       "norm_label": "console"
     },
     {
@@ -175,8 +175,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "models_console_console_repr",
-      "community": 15,
-      "community_name": "console.py",
+      "community": 2,
+      "community_name": "extension.py",
       "norm_label": ".__repr__()"
     },
     {
@@ -297,7 +297,7 @@
       "_origin": "ast",
       "id": "models_vendor",
       "community": 2,
-      "community_name": "vendor.py",
+      "community_name": "extension.py",
       "norm_label": "vendor.py"
     },
     {
@@ -308,7 +308,7 @@
       "_origin": "ast",
       "id": "models_vendor_vendor",
       "community": 2,
-      "community_name": "vendor.py",
+      "community_name": "extension.py",
       "norm_label": "vendor"
     },
     {
@@ -319,7 +319,7 @@
       "_origin": "ast",
       "id": "models_vendoraccount",
       "community": 2,
-      "community_name": "vendor.py",
+      "community_name": "extension.py",
       "norm_label": "vendoraccount.py"
     },
     {
@@ -330,7 +330,7 @@
       "_origin": "ast",
       "id": "models_vendoraccount_vendoraccount",
       "community": 2,
-      "community_name": "vendor.py",
+      "community_name": "extension.py",
       "norm_label": "vendoraccount"
     },
     {
@@ -341,7 +341,7 @@
       "_origin": "ast",
       "id": "models_vendorpin",
       "community": 2,
-      "community_name": "vendor.py",
+      "community_name": "extension.py",
       "norm_label": "vendorpin.py"
     },
     {
@@ -352,7 +352,7 @@
       "_origin": "ast",
       "id": "models_vendorpin_vendorpin",
       "community": 2,
-      "community_name": "vendor.py",
+      "community_name": "extension.py",
       "norm_label": "vendorpin"
     },
     {
@@ -363,7 +363,7 @@
       "_origin": "ast",
       "id": "models_vendorpin_vendorpin_repr",
       "community": 2,
-      "community_name": "vendor.py",
+      "community_name": "extension.py",
       "norm_label": ".__repr__()"
     },
     {
@@ -373,7 +373,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_vendorstatus",
-      "community": 5,
+      "community": 2,
       "community_name": "extension.py",
       "norm_label": "vendorstatus.py"
     },
@@ -384,7 +384,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "models_vendorstatus_vendorstatus",
-      "community": 5,
+      "community": 2,
       "community_name": "extension.py",
       "norm_label": "vendorstatus"
     },
@@ -491,7 +491,7 @@
       "label": "validate_pin()",
       "file_type": "code",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L224",
+      "source_location": "L223",
       "_origin": "ast",
       "id": "routes_auth_routes_validate_pin",
       "community": 1,
@@ -502,18 +502,18 @@
       "label": "refresh_token_route()",
       "file_type": "code",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L283",
+      "source_location": "L282",
       "_origin": "ast",
       "id": "routes_auth_routes_refresh_token_route",
-      "community": 1,
-      "community_name": "auth_routes.py",
+      "community": 0,
+      "community_name": "jwt_helper.py",
       "norm_label": "refresh_token_route()"
     },
     {
       "label": "logout_route()",
       "file_type": "code",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L308",
+      "source_location": "L307",
       "_origin": "ast",
       "id": "routes_auth_routes_logout_route",
       "community": 3,
@@ -524,7 +524,7 @@
       "label": "forgot_password()",
       "file_type": "code",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L344",
+      "source_location": "L343",
       "_origin": "ast",
       "id": "routes_auth_routes_forgot_password",
       "community": 1,
@@ -535,7 +535,7 @@
       "label": "verify_reset_code()",
       "file_type": "code",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L424",
+      "source_location": "L423",
       "_origin": "ast",
       "id": "routes_auth_routes_verify_reset_code",
       "community": 1,
@@ -546,7 +546,7 @@
       "label": "reset_password()",
       "file_type": "code",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L462",
+      "source_location": "L461",
       "_origin": "ast",
       "id": "routes_auth_routes_reset_password",
       "community": 1,
@@ -557,7 +557,7 @@
       "label": "change_password()",
       "file_type": "code",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L518",
+      "source_location": "L517",
       "_origin": "ast",
       "id": "routes_auth_routes_change_password",
       "community": 1,
@@ -593,8 +593,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "services_auth_services_generate_token_for_vendor",
-      "community": 3,
-      "community_name": "auth_services.py",
+      "community": 0,
+      "community_name": "jwt_helper.py",
       "norm_label": "generate_token_for_vendor()"
     },
     {
@@ -626,8 +626,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "services_auth_services_rationale_13",
-      "community": 3,
-      "community_name": "auth_services.py",
+      "community": 0,
+      "community_name": "jwt_helper.py",
       "norm_label": "generate jwt token directly from vendor_id and parent_type."
     },
     {
@@ -807,94 +807,6 @@
       "norm_label": "password_manager"
     },
     {
-      "label": "test_kiosk_login.py",
-      "file_type": "code",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "tests_test_kiosk_login",
-      "community": 14,
-      "community_name": "LoginTests",
-      "norm_label": "test_kiosk_login.py"
-    },
-    {
-      "label": "LoginTests",
-      "file_type": "code",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "tests_test_kiosk_login_logintests",
-      "community": 14,
-      "community_name": "LoginTests",
-      "norm_label": "logintests"
-    },
-    {
-      "label": ".setUp()",
-      "file_type": "code",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "tests_test_kiosk_login_logintests_setup",
-      "community": 14,
-      "community_name": "LoginTests",
-      "norm_label": ".setup()"
-    },
-    {
-      "label": ".test_missing_password_is_400_before_database_access()",
-      "file_type": "code",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L34",
-      "_origin": "ast",
-      "id": "tests_test_kiosk_login_logintests_test_missing_password_is_400_before_database_access",
-      "community": 14,
-      "community_name": "LoginTests",
-      "norm_label": ".test_missing_password_is_400_before_database_access()"
-    },
-    {
-      "label": ".test_wrong_password_is_401_and_does_not_list_vendors()",
-      "file_type": "code",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L41",
-      "_origin": "ast",
-      "id": "tests_test_kiosk_login_logintests_test_wrong_password_is_401_and_does_not_list_vendors",
-      "community": 14,
-      "community_name": "LoginTests",
-      "norm_label": ".test_wrong_password_is_401_and_does_not_list_vendors()"
-    },
-    {
-      "label": ".test_unknown_account_returns_401()",
-      "file_type": "code",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "tests_test_kiosk_login_logintests_test_unknown_account_returns_401",
-      "community": 14,
-      "community_name": "LoginTests",
-      "norm_label": ".test_unknown_account_returns_401()"
-    },
-    {
-      "label": ".test_correct_password_returns_vendor_list()",
-      "file_type": "code",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L53",
-      "_origin": "ast",
-      "id": "tests_test_kiosk_login_logintests_test_correct_password_returns_vendor_list",
-      "community": 14,
-      "community_name": "LoginTests",
-      "norm_label": ".test_correct_password_returns_vendor_list()"
-    },
-    {
-      "label": "HTTP contract regressions without connecting to vendor data or Redis.",
-      "file_type": "rationale",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "tests_test_kiosk_login_rationale_1",
-      "community": 14,
-      "community_name": "LoginTests",
-      "norm_label": "http contract regressions without connecting to vendor data or redis."
-    },
-    {
       "label": "utils/__init__.py",
       "file_type": "code",
       "source_file": "utils/__init__.py",
@@ -923,8 +835,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "utils_jwt_helper_resolve_expiration_hours",
-      "community": 1,
-      "community_name": "auth_routes.py",
+      "community": 0,
+      "community_name": "jwt_helper.py",
       "norm_label": "_resolve_expiration_hours()"
     },
     {
@@ -934,8 +846,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "utils_jwt_helper_create_jwt_token",
-      "community": 3,
-      "community_name": "auth_services.py",
+      "community": 0,
+      "community_name": "jwt_helper.py",
       "norm_label": "create_jwt_token()"
     },
     {
@@ -1011,8 +923,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "utils_jwt_helper_rationale_27",
-      "community": 3,
-      "community_name": "auth_services.py",
+      "community": 0,
+      "community_name": "jwt_helper.py",
       "norm_label": "generate a jwt token."
     },
     {
@@ -1122,7 +1034,7 @@
       "_origin": "ast",
       "id": "wsgi",
       "community": 5,
-      "community_name": "extension.py",
+      "community_name": "app/__init__.py",
       "norm_label": "wsgi.py"
     },
     {
@@ -1777,7 +1689,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "routes/auth_routes.py",
-      "source_location": "L371",
+      "source_location": "L370",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes_forgot_password",
@@ -1789,7 +1701,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "routes/auth_routes.py",
-      "source_location": "L368",
+      "source_location": "L367",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes_forgot_password",
@@ -2077,7 +1989,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L518",
+      "source_location": "L517",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes",
@@ -2099,7 +2011,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L344",
+      "source_location": "L343",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes",
@@ -2121,7 +2033,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L308",
+      "source_location": "L307",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes",
@@ -2132,7 +2044,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L283",
+      "source_location": "L282",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes",
@@ -2143,7 +2055,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L462",
+      "source_location": "L461",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes",
@@ -2154,7 +2066,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L224",
+      "source_location": "L223",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes",
@@ -2187,7 +2099,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L424",
+      "source_location": "L423",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes",
@@ -2291,18 +2203,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/auth_routes.py",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "routes_auth_routes",
-      "target": "utils_jwt_helper_resolve_expiration_hours",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -2319,7 +2219,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L402",
+      "source_location": "L401",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes_forgot_password",
@@ -2331,7 +2231,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L519",
+      "source_location": "L518",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes_change_password",
@@ -2343,7 +2243,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L136",
+      "source_location": "L126",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes_login_route",
@@ -2355,7 +2255,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L463",
+      "source_location": "L462",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes_reset_password",
@@ -2367,7 +2267,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L562",
+      "source_location": "L561",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes_change_password",
@@ -2379,7 +2279,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L168",
+      "source_location": "L167",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes_login_route",
@@ -2391,7 +2291,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L254",
+      "source_location": "L253",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes_validate_pin",
@@ -2414,7 +2314,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L517",
+      "source_location": "L516",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -2426,7 +2326,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L343",
+      "source_location": "L342",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -2450,7 +2350,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L307",
+      "source_location": "L306",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -2462,7 +2362,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L282",
+      "source_location": "L281",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -2474,7 +2374,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L461",
+      "source_location": "L460",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -2486,7 +2386,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L223",
+      "source_location": "L222",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -2498,7 +2398,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "routes/auth_routes.py",
-      "source_location": "L423",
+      "source_location": "L422",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -2512,7 +2412,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "routes/auth_routes.py",
-      "source_location": "L257",
+      "source_location": "L256",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes_validate_pin",
@@ -2524,19 +2424,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "routes/auth_routes.py",
-      "source_location": "L268",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "routes_auth_routes_validate_pin",
-      "target": "utils_jwt_helper_resolve_expiration_hours"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "routes/auth_routes.py",
-      "source_location": "L293",
+      "source_location": "L292",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes_refresh_token_route",
@@ -2548,19 +2436,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "routes/auth_routes.py",
-      "source_location": "L302",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "routes_auth_routes_refresh_token_route",
-      "target": "utils_jwt_helper_resolve_expiration_hours"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "routes/auth_routes.py",
-      "source_location": "L323",
+      "source_location": "L322",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes_logout_route",
@@ -2572,7 +2448,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "routes/auth_routes.py",
-      "source_location": "L401",
+      "source_location": "L400",
       "weight": 1.0,
       "_origin": "ast",
       "source": "routes_auth_routes_forgot_password",
@@ -2877,83 +2753,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L14",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "tests_test_kiosk_login",
-      "target": "tests_test_kiosk_login_logintests",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "tests_test_kiosk_login_rationale_1",
-      "target": "tests_test_kiosk_login",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L15",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "tests_test_kiosk_login_logintests",
-      "target": "tests_test_kiosk_login_logintests_setup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L53",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "tests_test_kiosk_login_logintests",
-      "target": "tests_test_kiosk_login_logintests_test_correct_password_returns_vendor_list",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L34",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "tests_test_kiosk_login_logintests",
-      "target": "tests_test_kiosk_login_logintests_test_missing_password_is_400_before_database_access",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L47",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "tests_test_kiosk_login_logintests",
-      "target": "tests_test_kiosk_login_logintests_test_unknown_account_returns_401",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_kiosk_login.py",
-      "source_location": "L41",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "tests_test_kiosk_login_logintests",
-      "target": "tests_test_kiosk_login_logintests_test_wrong_password_is_401_and_does_not_list_vendors",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "utils/jwt_helper.py",
       "source_location": "L26",
       "weight": 1.0,
@@ -3211,5 +3010,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e468c93d69e842d20f3d1c2fcd4e49eb792443a9"
+  "built_at_commit": "fc8a3e3140e59520d4f31889383497c043e36116"
 }

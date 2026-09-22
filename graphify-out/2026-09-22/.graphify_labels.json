@@ -1,10 +1,10 @@
 {
   "0": "jwt_helper.py",
   "1": "auth_routes.py",
-  "2": "vendor.py",
+  "2": "extension.py",
   "3": "auth_services.py",
   "4": "_EmailText",
-  "5": "extension.py",
+  "5": "app/__init__.py",
   "6": "AGENTS.md",
   "7": "models/__init__.py",
   "8": "password_manager",
@@ -12,7 +12,5 @@
   "10": "services/__init__.py",
   "11": "20260305_login_perf_indexes.sql",
   "12": "20260324_password_force_change_flag.sql",
-  "13": "utils/__init__.py",
-  "14": "LoginTests",
-  "15": "console.py"
+  "13": "utils/__init__.py"
 }
