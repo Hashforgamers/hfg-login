@@ -10,9 +10,9 @@
     "semantic_hash": "3dec36cbfccdb37c77b83f94a2e05a1c"
   },
   "app/__init__.py": {
-    "mtime": 1790023242.964468,
-    "ast_hash": "ca015a5cccdcf90103e3b8d27c89e34a",
-    "semantic_hash": ""
+    "mtime": 1776000468.0218387,
+    "ast_hash": "a8ede5d7e0b4cb3fb04ba57ff2f86b23",
+    "semantic_hash": "a8ede5d7e0b4cb3fb04ba57ff2f86b23"
   },
   "app/config.py": {
     "mtime": 1776000444.5742805,
@@ -80,8 +80,8 @@
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "routes/auth_routes.py": {
-    "mtime": 1790023242.9634469,
-    "ast_hash": "4db399375fcc9c5b09803a95789411da",
+    "mtime": 1789754793.9465494,
+    "ast_hash": "cc6bfce0ecf4813df21679d7cb4b5d37",
     "semantic_hash": ""
   },
   "services/__init__.py": {
@@ -90,9 +90,9 @@
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "services/auth_services.py": {
-    "mtime": 1790023242.9640439,
-    "ast_hash": "4b021b25ba81aa65cfb96ecb2be32764",
-    "semantic_hash": ""
+    "mtime": 1756638838.127217,
+    "ast_hash": "5de33e726430112c171f2778a13bc744",
+    "semantic_hash": "5de33e726430112c171f2778a13bc744"
   },
   "sql/20260305_login_perf_indexes.sql": {
     "mtime": 1772732234.488247,
@@ -147,11 +147,6 @@
   "requirements.txt": {
     "mtime": 1772732234.4875653,
     "ast_hash": "bbc3d76e529c612706a436f75db5b225",
-    "semantic_hash": ""
-  },
-  "tests/test_kiosk_login.py": {
-    "mtime": 1790023603.4264402,
-    "ast_hash": "f4ff7d7af37e7dbc178ccab938371dd3",
     "semantic_hash": ""
   }
 }

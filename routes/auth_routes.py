@@ -4,7 +4,7 @@ import os
 import re
 from flask import Blueprint, request, jsonify, current_app
 from services.auth_services import invalidate_token
-from utils.jwt_helper import create_jwt_token, refresh_token, DEFAULT_EXPIRATION_HOURS
+from utils.jwt_helper import create_jwt_token, refresh_token, DEFAULT_EXPIRATION_HOURS, _resolve_expiration_hours
 from flask_mail import Message
 from datetime import datetime, timedelta
 from app.extension import mail,db
@@ -123,16 +123,17 @@ def auth_health():
 
 @auth_bp.route('/login', methods=['POST'])
 def login_route():
-    _ensure_password_force_change_column()
     started_at = time.perf_counter()
     data = request.get_json(silent=True) or {}
     email = (data.get('email') or "").strip().lower()
-    password = (data.get('password') or "").strip()
+    password = data.get('password') or ""
     parent_type = data.get('parent_type', 'user')
 
-    if not email or not password:
-        return jsonify({'status': 'fail', 'message': 'Email and password are required.'}), 400
+    if not email or not isinstance(password, str) or not password:
+        current_app.logger.warning("login_rejected reason=missing_credentials status=400")
+        return jsonify({'status': 'error', 'code': 'credentials_required', 'message': 'Email and password are required.'}), 400
 
+    _ensure_password_force_change_column()
     if parent_type == 'vendor':
         vendor_account = (
             VendorAccount.query
@@ -264,7 +265,7 @@ def validate_pin():
         'message': 'PIN validated successfully.',
         'data': {
             'token': token,
-            'expires_in': 3600 * DEFAULT_EXPIRATION_HOURS
+            'expires_in': 3600 * _resolve_expiration_hours()
         }
     })
     response.headers["X-Response-Time-ms"] = f"{(time.perf_counter() - started_at) * 1000:.2f}"
@@ -298,7 +299,7 @@ def refresh_token_route():
         'message': 'Token refreshed successfully.',
         'data': {
             'token': token,
-            'expires_in': 3600 * DEFAULT_EXPIRATION_HOURS
+            'expires_in': 3600 * _resolve_expiration_hours()
         }
     }), 200
 

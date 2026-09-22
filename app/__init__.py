@@ -83,7 +83,18 @@ def create_app():
                         response.status_code,
                         elapsed_ms,
                     )
+        if request.path == "/api/login":
+            app.logger.warning("login_result request_id=%s status=%s", getattr(g, "request_id", "-"), response.status_code)
         return response
+
+    from werkzeug.exceptions import HTTPException
+    @app.errorhandler(Exception)
+    def json_error(exc):
+        db.session.rollback()
+        if isinstance(exc, HTTPException):
+            return {"status": "error", "code": "http_error", "message": exc.description}, exc.code
+        app.logger.exception("Unhandled login API error")
+        return {"status": "error", "code": "internal_error"}, 500
 
     # Configure logging
     debug_mode = app.config.get("DEBUG_MODE", False)

@@ -59,7 +59,7 @@ def login(email, password, parent_type):
     if not password_manager:
         return None, "Invalid credentials"
 
-    current_app.logger.info(f"Test 4 {password_manager.password} {password}")
+    # Never log supplied or stored credentials.
     # Verify password
     if password_manager.password != password:
         return None, "Invalid credentials"
