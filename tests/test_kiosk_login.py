@@ -55,6 +55,22 @@ class LoginTests(unittest.TestCase):
         result=self.client.post('/api/login',json={'email':'vendor@example.com','parent_type':'vendor','password':'correct-password'})
         self.assertEqual(result.status_code,200,result.json)
         self.assertEqual(result.json['vendors'][0]['pc_count'],2)
+        self.assertEqual(result.json['vendors'][0]['cafe_name'],'Test')
+
+    def _login_with(self, **row):
+        base=dict(id=1,cafe_name='Beyond Games',owner_name='Owner',description='',pc_count=0)
+        base.update(row)
+        self.vendor.query.outerjoin.return_value.filter.return_value.with_entities.return_value.group_by.return_value.all.return_value=[SimpleNamespace(**base)]
+        return self.client.post('/api/login',json={'email':'vendor@example.com','parent_type':'vendor','password':'correct-password'})
+
+    def test_cafe_name_prefers_display_name(self):
+        result=self._login_with(display_name='  Hash Arena  ')
+        self.assertEqual(result.json['vendors'][0]['cafe_name'],'Hash Arena')
+
+    def test_cafe_name_falls_back_to_business_name(self):
+        for blank in (None,'','   '):
+            result=self._login_with(display_name=blank)
+            self.assertEqual(result.json['vendors'][0]['cafe_name'],'Beyond Games')
 
 
 if __name__=='__main__': unittest.main()
