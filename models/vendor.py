@@ -11,6 +11,8 @@ class Vendor(db.Model):
     
     id = Column(Integer, Sequence('vendor_id_seq', start=2000), primary_key=True)
     cafe_name = Column(String(255), nullable=False)
+    # Public name set in dashboard Settings; owned by hfg-dashboard-service.
+    display_name = Column(String(120), nullable=True)
     owner_name = Column(String(255), nullable=False)
     description = Column(String(255), nullable=True)
 

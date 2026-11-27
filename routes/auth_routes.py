@@ -188,17 +188,21 @@ def login_route():
         .with_entities(
             Vendor.id,
             Vendor.cafe_name,
+            Vendor.display_name,
             Vendor.owner_name,
             Vendor.description,
             func.count(Console.id).label("pc_count"),
         )
-        .group_by(Vendor.id, Vendor.cafe_name, Vendor.owner_name, Vendor.description)
+        .group_by(Vendor.id, Vendor.cafe_name, Vendor.display_name, Vendor.owner_name, Vendor.description)
         .all()
     )
 
+    # cafe_name carries the public name: the display name set in dashboard
+    # Settings, or the registered business name when none is set. The kiosk
+    # welcome screen and the dashboard cafe switcher read this field.
     vendor_list = [{
         'id': row.id,
-        'cafe_name': row.cafe_name,
+        'cafe_name': (getattr(row, 'display_name', None) or '').strip() or row.cafe_name,
         'owner_name': row.owner_name,
         'description': row.description,
         'pc_count': int(row.pc_count or 0),
